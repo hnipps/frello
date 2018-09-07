@@ -2,7 +2,30 @@ import React, { Component } from "react";
 import List from "./components/list/list";
 
 class App extends Component {
+  renderLists = lists => {
+    return lists.map(list => {
+      return <List title={list.title} cards={list.cards} />;
+    });
+  };
+
   render() {
+    const lists = [
+      {
+        title: "Stuff I wanna do",
+        cards: [
+          "Learn to speak Japanese",
+          "Order salad instead of fries (just once)"
+        ]
+      },
+      {
+        title: "Stuff I've planned",
+        cards: ["Ski in Colorado"]
+      },
+      {
+        title: "Stuff I did!!",
+        cards: ["Visit Machu Picchu", "Eat pizza in Rome"]
+      }
+    ];
     return (
       <div>
         {/* Navbar */}
@@ -18,26 +41,7 @@ class App extends Component {
           </div>
           {/* List Listing */}
           <div>
-            <List
-              title="Stuff I wanna do"
-              cards={[
-                "Learn to speak Japanese",
-                "Order salad instead of fries (just once)"
-              ]}
-            />
-            <List
-              title="Stuff I've planned"
-              cards={[
-                "Ski in Colorado"
-              ]}
-            />
-            <List
-              title="Stuff I did!"
-              cards={[
-                "Visit Macchu Picchu",
-                "Eat pizza in Rome"
-              ]}
-            />
+            {this.renderLists(lists)}
             <input placeholder="Add a list..." />
           </div>
         </div>
