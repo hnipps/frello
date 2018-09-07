@@ -15,7 +15,7 @@ class App extends Component {
         },
         {
           title: "Stuff I've planned",
-          cards: ["Ski in Colorado"]
+          cards: ["Ski in Colorado", "Eat a bag of Cheetos without licking my fingers"]
         },
         {
           title: "Stuff I did!!",
@@ -27,8 +27,8 @@ class App extends Component {
 
   addList = event => {
     event.preventDefault();
-    const newList = event.target.value;
     if (event.keyCode === 13) {
+      const newList = event.target.value;
       this.setState(prevState => ({
         lists: [
           ...prevState.lists,
@@ -42,9 +42,40 @@ class App extends Component {
     }
   };
 
+  addCard = event => {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      const newCard = event.target.value;
+      const titleOfListToUpdate = event.target.id.slice(
+        0,
+        event.target.id.indexOf("-")
+      );
+
+      let indexToUpdate;
+      const listToUpdate = this.state.lists.find((list, index) => {
+        indexToUpdate = index;
+        return list.title === titleOfListToUpdate;
+      });
+
+      const updatedList = {
+        ...listToUpdate,
+        cards: [...listToUpdate.cards, newCard]
+      };
+      const newLists = [...this.state.lists];
+      newLists.splice(indexToUpdate, 1, updatedList);
+
+      this.setState(prevState => ({
+        lists: newLists
+      }));
+      event.target.value = "";
+    }
+  };
+
   renderLists = lists => {
     return lists.map(list => {
-      return <List title={list.title} cards={list.cards} />;
+      return (
+        <List key={`list-${list.title}`} title={list.title} cards={list.cards} addCard={this.addCard} />
+      );
     });
   };
 
