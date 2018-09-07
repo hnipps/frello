@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import List from "./components/list/list";
 
 class App extends Component {
   render() {
@@ -17,35 +18,26 @@ class App extends Component {
           </div>
           {/* List Listing */}
           <div>
-            <article>
-              <h3>Stuff I wanna do</h3>
-              <ul>
-                <li>Learn to speak Japanese</li>
-                <li>Order salad instead of fries (just once)</li>
-                <li>
-                  <input placeholder="Add a card..." />
-                </li>
-              </ul>
-            </article>
-            <article>
-              <h3>Stuff I've planned</h3>
-              <ul>
-                <li>Ski in Colorado</li>
-                <li>
-                  <input placeholder="Add a card..." />
-                </li>
-              </ul>
-            </article>
-            <article>
-              <h3>Stuff I did!</h3>
-              <ul>
-                <li>Visit Macchu Picchu</li>
-                <li>Eat pizza in Rome</li>
-                <li>
-                  <input placeholder="Add a card..." />
-                </li>
-              </ul>
-            </article>
+            <List
+              title="Stuff I wanna do"
+              cards={[
+                "Learn to speak Japanese",
+                "Order salad instead of fries (just once)"
+              ]}
+            />
+            <List
+              title="Stuff I've planned"
+              cards={[
+                "Ski in Colorado"
+              ]}
+            />
+            <List
+              title="Stuff I did!"
+              cards={[
+                "Visit Macchu Picchu",
+                "Eat pizza in Rome"
+              ]}
+            />
             <input placeholder="Add a list..." />
           </div>
         </div>
