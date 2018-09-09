@@ -15,7 +15,10 @@ class App extends Component {
         },
         {
           title: "Stuff I've planned",
-          cards: ["Ski in Colorado", "Eat a bag of Cheetos without licking my fingers"]
+          cards: [
+            "Ski in Colorado",
+            "Eat a bag of Cheetos without licking my fingers"
+          ]
         },
         {
           title: "Stuff I did!!",
@@ -65,16 +68,55 @@ class App extends Component {
       newLists.splice(indexToUpdate, 1, updatedList);
 
       this.setState(prevState => ({
+        ...prevState,
         lists: newLists
       }));
       event.target.value = "";
     }
   };
 
+  deleteCard = event => {
+    event.preventDefault();
+    const buttonValue = event.target.value;
+    const titleOfListToUpdate = buttonValue.slice(0, buttonValue.indexOf("-"));
+    const cardToUpdate = buttonValue.slice(
+      buttonValue.indexOf("-") + 6,
+      buttonValue.length
+    );
+    let listIndexToUpdate;
+    const listToUpdate = this.state.lists.find((list, index) => {
+      listIndexToUpdate = index;
+      return list.title === titleOfListToUpdate;
+    });
+
+    const updatedList = {
+      ...listToUpdate,
+      cards: [...listToUpdate.cards]
+    };
+    const cardIndexToUpdate = listToUpdate.cards.findIndex(card => {
+      return card === cardToUpdate;
+    });
+    updatedList.cards.splice(cardIndexToUpdate, 1);
+
+    const newLists = [...this.state.lists];
+    newLists.splice(listIndexToUpdate, 1, updatedList);
+
+    this.setState(prevState => ({
+      ...prevState,
+      lists: newLists
+    }));
+  };
+
   renderLists = lists => {
     return lists.map(list => {
       return (
-        <List key={`list-${list.title}`} title={list.title} cards={list.cards} addCard={this.addCard} />
+        <List
+          key={`list-${list.title}`}
+          title={list.title}
+          cards={list.cards}
+          addCard={this.addCard}
+          deleteCard={this.deleteCard}
+        />
       );
     });
   };

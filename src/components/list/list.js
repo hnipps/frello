@@ -3,7 +3,17 @@ import React, { Component } from "react";
 class List extends Component {
   renderCards = cards => {
     return cards.map((card, index) => {
-      return <li key={`${this.props.title}-card-${index}`} >{card}</li>;
+      return (
+        <li key={`${this.props.title}-card-${index}`}>
+          {card}{" "}
+          <button
+            value={`${this.props.title}-card-${card}`}
+            onClick={this.props.deleteCard}
+          >
+            x
+          </button>
+        </li>
+      );
     });
   };
 
@@ -14,7 +24,11 @@ class List extends Component {
         <ul>
           {this.renderCards(this.props.cards)}
           <li>
-            <input id={`${this.props.title}-card-input`} placeholder="Add a card..." onKeyUp={this.props.addCard} />
+            <input
+              id={`${this.props.title}-card-input`}
+              placeholder="Add a card..."
+              onKeyUp={this.props.addCard}
+            />
           </li>
         </ul>
       </article>
