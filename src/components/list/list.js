@@ -10,7 +10,7 @@ class List extends Component {
           cardIndex={index}
           deleteCard={this.props.deleteCard}
           title={this.props.title}
-        ></Card>
+        />
       );
     });
   };
