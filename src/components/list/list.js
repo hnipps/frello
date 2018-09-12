@@ -1,18 +1,16 @@
 import React, { Component } from "react";
+import Card from "../card/card";
 
 class List extends Component {
   renderCards = cards => {
     return cards.map((card, index) => {
       return (
-        <li key={`${this.props.title}-card-${index}`}>
-          {card}{" "}
-          <button
-            value={`${this.props.title}-card-${card}`}
-            onClick={this.props.deleteCard}
-          >
-            x
-          </button>
-        </li>
+        <Card
+          cardContent={card}
+          cardIndex={index}
+          deleteCard={this.props.deleteCard}
+          title={this.props.title}
+        ></Card>
       );
     });
   };
