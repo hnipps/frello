@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import List from "./components/list/list";
 import Board from "./components/board/board";
+import "./App.css";
 
 class App extends Component {
   currentBoard;
@@ -179,11 +180,13 @@ class App extends Component {
   render() {
     this.currentBoard = this.state.boards[0];
     return (
-      <div>
+      <div id="appContainer">
         {/* Navbar */}
-        <div>
-          <h1>Frello</h1>
-          <button>Boards</button>
+        <div className="navbar">
+          <h1 className="navbar-title">Frello</h1>
+          <div className="navbar-controls">
+            <button>Boards</button>
+          </div>
         </div>
         {/* Board Content */}
         <Board

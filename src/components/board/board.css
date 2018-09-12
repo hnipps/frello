@@ -1,0 +1,27 @@
+h2, h3 {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.board-container > * {
+  padding-left: 1rem;
+}
+
+.board-header {
+  background-color: darkblue;
+  color: white;
+}
+
+.board-title {
+}
+
+.list-container {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.add-list-container {
+  display: flex;
+  flex-direction: column;
+}
