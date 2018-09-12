@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import List from "./components/list/list";
+import Board from "./components/board/board";
 
 class App extends Component {
   currentBoard;
@@ -58,8 +59,25 @@ class App extends Component {
   };
 
   deleteList = event => {
-    
-  }
+    const boardIndexToUpdate = this.findBoardIndex();
+    const titleOfListToDelete = event.target.value;
+    const listIndexToDelete = this.currentBoard.lists.findIndex(list => {
+      return list.title === titleOfListToDelete;
+    });
+
+    const newLists = [...this.currentBoard.lists];
+    newLists.splice(listIndexToDelete, 1);
+
+    const updatedBoard = {
+      ...this.currentBoard,
+      lists: newLists
+    };
+    const updatedBoards = [...this.state.boards];
+    updatedBoards.splice(boardIndexToUpdate, 1, updatedBoard);
+    this.setState(prevState => ({
+      boards: updatedBoards
+    }));
+  };
 
   addCard = event => {
     if (event.keyCode === 13) {
@@ -144,6 +162,7 @@ class App extends Component {
           cards={list.cards}
           addCard={this.addCard}
           deleteCard={this.deleteCard}
+          deleteList={this.deleteList}
         />
       );
     });
@@ -167,17 +186,11 @@ class App extends Component {
           <button>Boards</button>
         </div>
         {/* Board Content */}
-        <div>
-          {/* Board Header */}
-          <div>
-            <h2>{this.currentBoard.title}</h2>
-          </div>
-          {/* List Listing */}
-          <div>
-            {this.renderLists(this.currentBoard.lists)}
-            <input placeholder="Add a list..." onKeyUp={this.addList} />
-          </div>
-        </div>
+        <Board
+          board={this.currentBoard}
+          renderLists={this.renderLists}
+          addList={this.addList}
+        />
       </div>
     );
   }
