@@ -18,7 +18,15 @@ class List extends Component {
   render() {
     return (
       <article>
-        <h3>{this.props.title}</h3>
+        <h3>
+          {this.props.title}
+          <button
+            value={`${this.props.title}`}
+            onClick={this.props.deleteList}
+          >
+            x
+          </button>
+        </h3>
         <ul>
           {this.renderCards(this.props.cards)}
           <li>
