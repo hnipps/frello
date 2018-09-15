@@ -1,0 +1,23 @@
+.card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.card-content {
+  margin: 0.4rem 0;
+}
+
+.card-delete-button {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: inherit;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.card-delete-button:hover {
+  color: darkred;
+  cursor: pointer;
+}

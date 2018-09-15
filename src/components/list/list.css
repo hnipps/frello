@@ -15,9 +15,26 @@
 }
 
 .list-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .list-title {
+}
+
+.list-delete-button {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: inherit;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.list-delete-button:hover {
+  color: darkred;
+  cursor: pointer
 }
 
 .card-list {

@@ -8,7 +8,7 @@ class Board extends Component {
       <div className="board-container">
         {/* Board Header */}
         <div className="board-header">
-          <h2 className="board-title">{board.title}</h2>
+          <h2 className="board-title unselectable">{board.title}</h2>
         </div>
         {/* List Listing */}
         <div className="list-container">

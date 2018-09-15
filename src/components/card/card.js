@@ -1,11 +1,15 @@
 import React, { Component } from "react";
+import "./card.css";
 
 class Card extends Component {
   render() {
     return (
-      <li key={`${this.props.title}-card-${this.props.cardIndex}`}>
-        {this.props.cardContent}
+      <li
+        className="card"
+      >
+        <p className="card-content unselectable">{this.props.cardContent}</p>
         <button
+          className="card-delete-button"
           value={`${this.props.title}-card-${this.props.cardContent}`}
           onClick={this.props.deleteCard}
         >

@@ -7,6 +7,7 @@ class List extends Component {
     return cards.map((card, index) => {
       return (
         <Card
+          key={`${this.props.title}-card-${index}`}
           cardContent={card}
           cardIndex={index}
           deleteCard={this.props.deleteCard}
@@ -20,8 +21,8 @@ class List extends Component {
     return (
       <article className="list">
         <header className="list-header">
-          <h3 className="list-title">{this.props.title}</h3>
-          <button value={`${this.props.title}`} onClick={this.props.deleteList}>
+          <h3 className="list-title unselectable">{this.props.title}</h3>
+          <button className="list-delete-button" value={`${this.props.title}`} onClick={this.props.deleteList}>
             x
           </button>
         </header>
