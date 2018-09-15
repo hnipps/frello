@@ -1,0 +1,37 @@
+.list {
+  width: 13rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  background-color: lightgray;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.list-header {
+}
+
+.list-title {
+}
+
+.card-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.card-list > * {
+  margin-bottom: 0.5rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  padding: 0.5rem;
+}

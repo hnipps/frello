@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from "../card/card";
+import "./list.css";
 
 class List extends Component {
   renderCards = cards => {
@@ -17,17 +18,14 @@ class List extends Component {
 
   render() {
     return (
-      <article>
-        <h3>
-          {this.props.title}
-          <button
-            value={`${this.props.title}`}
-            onClick={this.props.deleteList}
-          >
+      <article className="list">
+        <header className="list-header">
+          <h3 className="list-title">{this.props.title}</h3>
+          <button value={`${this.props.title}`} onClick={this.props.deleteList}>
             x
           </button>
-        </h3>
-        <ul>
+        </header>
+        <ul className="card-list">
           {this.renderCards(this.props.cards)}
           <li>
             <input

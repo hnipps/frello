@@ -4,6 +4,10 @@ h2, h3 {
   margin-bottom: 0.5rem;
 }
 
+.board-container {
+  
+}
+
 .board-container > * {
   padding-left: 1rem;
 }
@@ -18,7 +22,10 @@ h2, h3 {
 
 .list-container {
   display: flex;
+  align-items: flex-start;
   overflow-x: scroll;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .add-list-container {
