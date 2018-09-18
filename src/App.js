@@ -183,10 +183,7 @@ class App extends Component {
       <div id="appContainer">
         {/* Navbar */}
         <div className="navbar">
-          <h1 className="navbar-title unselectable">Frello</h1>
-          <div className="navbar-controls">
-            <button>Boards</button>
-          </div>
+          <h1 className="navbar-title unselectable">FRELLO</h1>
         </div>
         {/* Board Content */}
         <Board

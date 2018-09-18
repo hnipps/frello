@@ -26,14 +26,13 @@ h1, h2, h3, p {
 }
 
 #appContainer {
-  background-color: darkgrey;
 }
 
 .navbar {
   height: 4rem;
-  background-color: deepskyblue;
   padding-left: 1rem;
-  color: white
+  background-color: coral;
+  color: gold;  
 }
 
 .navbar-title {

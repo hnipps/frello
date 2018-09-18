@@ -13,8 +13,8 @@ h2, h3 {
 }
 
 .board-header {
-  background-color: darkblue;
-  color: white;
+  background-color: gold;
+  color: coral;
 }
 
 .board-title {
@@ -31,7 +31,7 @@ h2, h3 {
 .add-list-container {
   display: flex;
   flex-direction: column;
-  background-color: lightgray;
+  background-color: blanchedalmond;
   border-radius: 5px;
   padding: 0.5rem 1rem;
 }
