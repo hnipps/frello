@@ -28,8 +28,9 @@ class List extends Component {
         </header>
         <ul className="card-list">
           {this.renderCards(this.props.cards)}
-          <li>
+          <li className="list-add-card-item">
             <input
+              className="list-add-card-input"
               id={`${this.props.title}-card-input`}
               placeholder="Add a card..."
               onKeyUp={this.props.addCard}

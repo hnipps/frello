@@ -14,7 +14,7 @@ class Board extends Component {
         <div className="list-container">
           {this.props.renderLists(board.lists)}
           <div className="add-list-container">
-            <input placeholder="Add a list..." onKeyUp={this.props.addList} />
+            <input className="board-add-list-input" placeholder="Add a list..." onKeyUp={this.props.addList} />
           </div>
         </div>
       </div>
