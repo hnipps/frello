@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import List from "./components/list/list";
 import Board from "./components/board/board";
-import "./App.css";
 
 class App extends Component {
   currentBoard;
