@@ -6,11 +6,11 @@ class Board extends Component {
     return (
       <div className="board-container">
         {/* Board Header */}
-        <div className="board-header">
-          <h2 className="board-title unselectable">{board.title}</h2>
+        <div className="dib w-100 pl2">
+          <h2 className="mv2">{board.title}</h2>
         </div>
         {/* List Listing */}
-        <div className="list-container">
+        <div className="flex overflow-scroll pl2">
           {this.props.renderLists(board.lists)}
           <div className="add-list-container">
             <input className="board-add-list-input" placeholder="Add a list..." onKeyUp={this.props.addList} />

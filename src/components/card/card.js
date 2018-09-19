@@ -4,11 +4,11 @@ class Card extends Component {
   render() {
     return (
       <li
-        className="card"
+        className="flex justify-between items-center"
       >
-        <p className="card-content unselectable">{this.props.cardContent}</p>
+        <p className="">{this.props.cardContent}</p>
         <button
-          className="card-delete-button"
+          className="bn bg-transparent fw6 f4 hover-dark-red ml1"
           value={`${this.props.title}-card-${this.props.cardContent}`}
           onClick={this.props.deleteCard}
         >

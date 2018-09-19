@@ -179,10 +179,10 @@ class App extends Component {
   render() {
     this.currentBoard = this.state.boards[0];
     return (
-      <div id="appContainer">
+      <div className="helvetica">
         {/* Navbar */}
-        <div className="navbar">
-          <h1 className="navbar-title unselectable">FRELLO</h1>
+        <div className="dib w-100 pl2">
+          <h1 className="mv2">FRELLO</h1>
         </div>
         {/* Board Content */}
         <Board
