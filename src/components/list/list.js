@@ -18,18 +18,18 @@ class List extends Component {
 
   render() {
     return (
-      <article className="flex-grow-0 flex-shrink-0 mb3 ba b--moon-gray br3 mr2 ph2 w5">
+      <article className="flex-grow-0 flex-shrink-0 mb3 br3 mr2 mb3 ph2 w5 bg-white-90">
         <header className="flex justify-between items-center">
           <h3 className="mv2">{this.props.title}</h3>
-          <button className="bn bg-transparent fw7 f3 hover-dark-red" value={`${this.props.title}`} onClick={this.props.deleteList}>
+          <button className="bn bg-transparent fw7 f3 hover-dark-red mid-gray pointer" value={`${this.props.title}`} onClick={this.props.deleteList}>
             x
           </button>
         </header>
         <ul className="list pl0 mv2">
           {this.renderCards(this.props.cards)}
-          <li className="">
+          <li className="ph2">
             <input
-              className="input-reset bn"
+              className="input-reset bn mv1 w-100"
               id={`${this.props.title}-card-input`}
               placeholder="Add a card..."
               onKeyUp={this.props.addCard}
