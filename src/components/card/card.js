@@ -4,7 +4,7 @@ class Card extends Component {
   render() {
     return (
       <li
-        className="flex justify-between items-center br2 mb2 ph2 bg-black-20"
+        className="flex justify-between items-center br2 mb2 ph2 bg-white-90"
       >
         <p className="mv1 mr1">{this.props.cardContent}</p>
         <button
