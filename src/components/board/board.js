@@ -10,10 +10,10 @@ class Board extends Component {
           <h2 className="mv2">{board.title}</h2>
         </div>
         {/* List Listing */}
-        <div className="flex overflow-scroll pl2">
+        <div className="flex items-start overflow-scroll pl2">
           {this.props.renderLists(board.lists)}
-          <div className="add-list-container">
-            <input className="board-add-list-input" placeholder="Add a list..." onKeyUp={this.props.addList} />
+          <div className="pr2">
+            <input className="" placeholder="Add a list..." onKeyUp={this.props.addList} />
           </div>
         </div>
       </div>

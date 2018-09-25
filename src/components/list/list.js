@@ -18,7 +18,7 @@ class List extends Component {
 
   render() {
     return (
-      <article className="mb2 ba br3 mr2 ph2 w5">
+      <article className="flex-grow-0 flex-shrink-0 mb3 ba b--moon-gray br3 mr2 ph2 w5">
         <header className="flex justify-between items-center">
           <h3 className="mv2">{this.props.title}</h3>
           <button className="bn bg-transparent fw7 f3 hover-dark-red" value={`${this.props.title}`} onClick={this.props.deleteList}>
