@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from "../card/card";
+import "./list.css";
 
 class List extends Component {
   renderCards = cards => {
@@ -29,7 +30,7 @@ class List extends Component {
           {this.renderCards(this.props.cards)}
           <li className="ph2">
             <input
-              className="input-reset bg-transparent dark-gray mv1 w-100 bb bt-0 bl-0 br-0 b--black-20 bw1"
+              className="list-input input-reset bg-transparent dark-gray mv1 w-100 bb bt-0 bl-0 br-0 b--black-20 bw1"
               id={`${this.props.title}-card-input`}
               placeholder="Add a card..."
               onKeyUp={this.props.addCard}

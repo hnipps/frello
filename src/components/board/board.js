@@ -7,7 +7,7 @@ class Board extends Component {
       <div className="board-container">
         {/* Board Header */}
         <div className="dib w-100 pl2">
-          <h2 className="mv2">{board.title}</h2>
+          <h2 className="mb3 mt0 mid-gray">{board.title}</h2>
         </div>
         {/* List Listing */}
         <div className="flex items-start overflow-scroll ph2">
