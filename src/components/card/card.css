@@ -7,13 +7,14 @@
   border-width: 1px;
   border-color: transparent;
   border-radius: 5px;
-  background-color: blanchedalmond;
+  background-color: hsla(0,0%,100%,.9);
   padding: 0.5rem;
 }
 
 .card-content {
   font-size: 1rem;
   margin: 0.4rem 0;
+  color: #333;
 }
 
 .card-delete-button {
@@ -23,6 +24,7 @@
   border: 0;
   padding: 0;
   background-color: transparent;
+  color: #555;
 }
 
 .card-delete-button:hover {

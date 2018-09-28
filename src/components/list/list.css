@@ -6,7 +6,7 @@
   border-radius: 10px;
   margin-bottom: 0.5rem;
   margin-right: 0.5rem;
-  background-color: gold;
+  background-color: rgba(0,0,0,0.2);
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
@@ -21,6 +21,7 @@
 }
 
 .list-title {
+  color: #333;
 }
 
 .list-delete-button {
@@ -30,6 +31,7 @@
   border: 0;
   padding: 0;
   background-color: transparent;
+  color: #333;
 }
 
 .list-delete-button:hover {
@@ -49,9 +51,10 @@
   border-width: 1px;
   border-color: transparent;
   border-radius: 5px;
-  background-color: blanchedalmond;
+  background-color: transparent;
   padding: 0.5rem;
 }
+
 
 .list-add-card-input {
   font-size: 1rem;
@@ -59,10 +62,20 @@
   margin: 0.4rem 0;
   border: 0;
   background-color: transparent;
+  border-bottom: rgba(0,0,0,0.2);
+  border-width: 2px;
+  border-bottom-style: solid;
+}
+
+.list-add-card-input::placeholder {
+  color: #333;
 }
 
 .list-add-card-input:focus {
   border: 0;
   background-color: transparent;
   outline: 0;
+  border-bottom: rgba(0,0,0,0.2);
+  border-width: 2px;
+  border-bottom-style: solid;
 }

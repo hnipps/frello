@@ -17,13 +17,13 @@ h1, h2, h3, p {
 }
 
 #appContainer {
+  background-color: rgba(0,0,0,.1);
 }
 
 .navbar {
   height: 4rem;
   padding-left: 1rem;
-  background-color: coral;
-  color: gold;  
+  color: #333;
 }
 
 .navbar-title {

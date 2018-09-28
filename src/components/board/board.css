@@ -13,8 +13,7 @@ h2, h3 {
 }
 
 .board-header {
-  background-color: gold;
-  color: coral;
+  color: #555;
 }
 
 .board-title {
@@ -31,7 +30,7 @@ h2, h3 {
 .add-list-container {
   display: flex;
   flex-direction: column;
-  background-color: blanchedalmond;
+  background-color: transparent;
   border-radius: 5px;
   padding: 0.5rem 1rem;
 }
@@ -42,10 +41,16 @@ h2, h3 {
   margin: 0.4rem 0;
   border: 0;
   background-color: transparent;
+  border-bottom: rgba(0,0,0,0.2);
+  border-width: 2px;
+  border-bottom-style: solid;
 }
 
 .board-add-list-input:focus {
   border: 0;
   background-color: transparent;
   outline: 0;
+  border-bottom: rgba(0,0,0,0.2);
+  border-width: 2px;
+  border-bottom-style: solid;
 }
