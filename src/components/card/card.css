@@ -1,13 +1,13 @@
 .card {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 0.5rem;
   border-style: solid;
-  border-width: 1px;
+  border-width: 0px;
   border-color: transparent;
   border-radius: 5px;
-  background-color: hsla(0,0%,100%,.9);
+  background-color: hsla(0, 0%, 100%, 0.9);
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
@@ -23,7 +23,8 @@
   font-weight: 600;
   font-family: inherit;
   border: 0;
-  padding: 0;
+  padding-top: 2px;
+  padding-bottom: 3px;
   background-color: transparent;
   color: #555;
 }
