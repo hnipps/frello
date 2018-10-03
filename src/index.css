@@ -1,0 +1,223 @@
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+  -webkit-appearance: button;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.border-box,
+a,
+article,
+aside,
+blockquote,
+body,
+code,
+dd,
+div,
+dl,
+dt,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+legend,
+li,
+main,
+nav,
+ol,
+p,
+pre,
+section,
+table,
+td,
+textarea,
+th,
+tr,
+ul {
+  box-sizing: border-box;
+}
+
+address,
+article,
+aside,
+div,
+footer,
+header,
+hgroup,
+layer,
+main,
+nav,
+section {
+  display: block;
+}
+
+.mb3 {
+  margin-bottom: 1rem;
+}
+
+.mr2 {
+  margin-right: 0.5rem;
+}
+
+.mv2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.pl0 {
+  padding-left: 0;
+}
+
+.ph2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.bg-black-20 {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.w5 {
+  width: 16rem;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.br3 {
+  border-radius: 0.5rem;
+}
+
+.dark-gray {
+  color: #333;
+}
+
+.helvetica {
+  font-family: helvetica neue, helvetica, sans-serif;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.f3 {
+  font-size: 1.5rem;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.mid-gray {
+  color: #555;
+}
+
+.fw7 {
+  font-weight: 700;
+}
+
+.bn {
+  border-style: none;
+  border-width: 0;
+}
+
+.mb2 {
+  margin-bottom: 0.5rem;
+}
+
+.bg-white-90 {
+  background-color: hsla(0, 0%, 100%, 0.9);
+}
+
+.br2 {
+  border-radius: 0.25rem;
+}
+
+.mv1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.mr1 {
+  margin-right: 0.25rem;
+}
+
+.f4 {
+  font-size: 1.25rem;
+}
+
+.fw6 {
+  font-weight: 600;
+}
+
+.pointer:hover,
+.shadow-hover {
+  cursor: pointer;
+}
+
+.hover-dark-red:focus,
+.hover-dark-red:hover {
+  color: #e7040f;
+}
+
+.justify-around {
+  justify-content: space-around
+}
