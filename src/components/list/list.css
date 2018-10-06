@@ -1,24 +1,29 @@
-.list {
+.list-container {
   width: 16rem;
   border-style: solid;
   border-width: 1px;
   border-color: transparent;
   border-radius: 10px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   margin-right: 0.5rem;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  padding-bottom: 0.5rem;
+  font-family: Helvetica, sans-serif;
 }
 
 .list-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
+}
+
+.list-header h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .list-title {
@@ -30,21 +35,20 @@
   font-weight: 600;
   font-family: inherit;
   border: 0;
-  padding: 0;
   background-color: transparent;
-  color: #333;
+  color: #555;
 }
 
 .list-delete-button:hover {
   color: darkred;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .card-list {
   list-style: none;
   padding-left: 0;
   margin-top: 0.5rem;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 
 .list-add-card-item {
@@ -53,30 +57,27 @@
   border-color: transparent;
   border-radius: 5px;
   background-color: transparent;
-  padding: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
-
 
 .list-add-card-input {
+  width: 100%;
   font-size: 1rem;
   padding: 0;
-  margin: 0.4rem 0;
+  margin: 0.25rem 0;
   border: 0;
   background-color: transparent;
-  border-bottom: rgba(0,0,0,0.2);
-  border-width: 2px;
+  border-bottom: rgba(0, 0, 0, 0.2);
+  border-width: 1px;
   border-bottom-style: solid;
-}
-
-.list-add-card-input::placeholder {
-  color: #333;
 }
 
 .list-add-card-input:focus {
   border: 0;
   background-color: transparent;
   outline: 0;
-  border-bottom: rgba(0,0,0,0.2);
+  border-bottom: rgba(0, 0, 0, 0.2);
   border-width: 2px;
   border-bottom-style: solid;
 }
