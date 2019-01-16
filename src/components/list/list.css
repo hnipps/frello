@@ -1,4 +1,4 @@
-.list-container {
+.list {
   width: 16rem;
   border-style: solid;
   border-width: 1px;
@@ -71,6 +71,7 @@
   border-bottom: rgba(0, 0, 0, 0.2);
   border-width: 1px;
   border-bottom-style: solid;
+  color: #333;
 }
 
 .list-add-card-input:focus {
