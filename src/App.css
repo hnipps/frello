@@ -1,40 +1,7 @@
-html, body, #root, #appContainer {
-  font-family: Arial, Helvetica, sans-serif;
-  height: 100%;
-}
-
-.unselectable {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+html, body, #root {
+  @apply font-sans h-full;
 }
 
 h1, h2, h3, p {
-  cursor: default;
-}
-
-#appContainer {
-  background-color: rgba(0,0,0,.1);
-}
-
-.navbar {
-  height: 4rem;
-  padding-left: 1rem;
-  color: #333;
-}
-
-.navbar-title {
-  margin-top: 1rem;
-  margin-right: 1rem;
-  display: inline-block;
-}
-
-.navbar-controls {
-  display: inline-flex;
-  justify-items: flex-start;
-  margin-top: auto;
-  margin-bottom: auto;
+  @apply cursor-default;
 }
