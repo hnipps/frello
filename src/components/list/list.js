@@ -19,18 +19,18 @@ class List extends Component {
 
   render() {
     return (
-      <article className="list">
-        <header className="list-header">
-          <h3 className="list-title unselectable">{this.props.title}</h3>
-          <button className="list-delete-button" value={`${this.props.title}`} onClick={this.props.deleteList}>
+      <article className="w-64 border-solid border border-transparent rounded-lg mb-4 mr-2 bg-grey flex-no-grow flex-no-shrink px-2 font-sans">
+        <header className="flex items-center justify-between">
+          <h3 className="my-2 text-grey-darkest select-none">{this.props.title}</h3>
+          <button className="text-2xl font-semibold border-none bg-transparent text-grey-darkest hover:text-red-dark" value={`${this.props.title}`} onClick={this.props.deleteList}>
             x
           </button>
         </header>
-        <ul className="card-list">
+        <ul className="list-reset my-2">
           {this.renderCards(this.props.cards)}
-          <li className="list-add-card-item">
+          <li className="border-solid border border-transparent rounded bg-transparent px-2">
             <input
-              className="list-add-card-input"
+              className="w-full text-base p-0 my-1 mx-0 bg-transparent border-b border-grey-dark"
               id={`${this.props.title}-card-input`}
               placeholder="Add a card..."
               onKeyUp={this.props.addCard}
